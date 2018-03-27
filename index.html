@@ -19,6 +19,10 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script>
+    function precisionRound(number, precision) {
+    var factor = Math.pow(10, precision);
+    return Math.round(number * factor) / factor;
+    }
     var requestURL = '//api.thingspeak.com/channels/331124/feeds.json?api_key=CCSB1H8NW7XAKW20&results=1';
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
@@ -26,9 +30,9 @@
     request.send();
     request.onload = function() {
         var bme280 = request.response;
-        $('#temperature').text(request.response.feeds[0].field2 +'° F');
-        $('#humidity').text(request.response.feeds[0].field4 + '%');
-        $('#pressure').text(request.response.feeds[0].field3 + 'hPa');
+        $('#temperature').text(precisionRound(request.response.feeds[0].field2,1) +'° F');
+        $('#humidity').text(precisionRound(request.response.feeds[0].field4,1) + '%');
+        $('#pressure').text(precisionRound(request.response.feeds[0].field3,2) + 'hPa');
     }
   </script>
 
