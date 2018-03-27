@@ -26,6 +26,9 @@
     request.send();
     request.onload = function() {
         var bme280 = request.response;
+        $('temp').text(request.response.feeds[0].field2 +' &#176; F');
+        $('humidity').text(request.response.feeds[0].field4 + ' &#37;');
+        $('humidity').text(request.response.feeds[0].field3 + ' hPa');
     }
   </script>
 
