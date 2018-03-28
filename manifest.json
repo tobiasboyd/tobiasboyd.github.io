@@ -1,0 +1,19 @@
+{
+    "name": "BME280",
+    "icons": [
+        {
+            "src": "/images/icon32.png",
+            "sizes": "32x32",
+            "type": "image/png",
+            "density": "0.75"
+        },
+        {
+            "src": "/images/icon192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "density": "4.0"
+        }
+    ],
+    "display": "standalone",
+    "orientation": "any"
+}
