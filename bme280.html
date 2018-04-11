@@ -39,7 +39,7 @@
         $('#humidity').text(precisionRound(request.response.feeds[0].field4,1) + '%');
         $('#pressure').text(precisionRound(request.response.feeds[0].field3,2) + 'hPa');
     }
-    $( "#reload" ).click(function() {
+    $( "button" ).click(function() {
       window.location.reload(true);
     });
   </script>
