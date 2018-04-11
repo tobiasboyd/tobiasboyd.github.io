@@ -22,8 +22,6 @@
   <link rel="manifest" href="manifest.json">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 
   <script>
     function precisionRound(number, precision) {
@@ -41,9 +39,6 @@
         $('#humidity').text(precisionRound(request.response.feeds[0].field4,1) + '%');
         $('#pressure').text(precisionRound(request.response.feeds[0].field3,2) + 'hPa');
     }
-    $( "button" ).on('click touchstart',function(){
-      window.location.reload(true);
-    });
   </script>
 
 </head>
@@ -55,7 +50,7 @@
         <h1 id="temperature">Temp (F)</h1>
         <h2 id="humidity">Humidity (%)</h2>
         <h3 id="pressure">Pressure</h3>
-        <button style="margin-top: 20px;" id="reload">reload</button>
+        <a href="javascript:window.location.reload(true);"><button style="margin-top: 20px;" id="reload">reload</button></a>
       </div>
     </div>
   </div>
