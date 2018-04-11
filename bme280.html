@@ -39,7 +39,7 @@
         $('#humidity').text(precisionRound(request.response.feeds[0].field4,1) + '%');
         $('#pressure').text(precisionRound(request.response.feeds[0].field3,2) + 'hPa');
     }
-    $( "button" ).click(function() {
+    $( "button" ).on('click touchstart',function(){
       window.location.reload(true);
     });
   </script>
