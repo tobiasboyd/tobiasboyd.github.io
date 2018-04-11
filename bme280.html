@@ -39,6 +39,9 @@
         $('#humidity').text(precisionRound(request.response.feeds[0].field4,1) + '%');
         $('#pressure').text(precisionRound(request.response.feeds[0].field3,2) + 'hPa');
     }
+    $( "#reload" ).click(function() {
+      window.location.reload(true);
+    });
   </script>
 
 </head>
@@ -50,7 +53,7 @@
         <h1 id="temperature">Temp (F)</h1>
         <h2 id="humidity">Humidity (%)</h2>
         <h3 id="pressure">Pressure</h3>
-        <h4><a href="javascript:window.location.reload(true)">reload</a></h4>
+        <button id="reload">reload</button>
       </div>
     </div>
   </div>
