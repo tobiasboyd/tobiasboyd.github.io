@@ -38,7 +38,8 @@
         $('#temperature').text(precisionRound(request.response.feeds[0].field2,1) +'° F');
         $('#humidity').text(precisionRound(request.response.feeds[0].field4,1) + '%');
         $('#pressure').text(precisionRound(request.response.feeds[0].field3,2) + 'hPa');
-        $('#airquality').text(precisionRound(request.response.feeds[0].field8,1) + 'µg/m³');
+        $('#airquality1').text(precisionRound(request.response.feeds[0].field8,1) + 'µg/m³');
+        $('#airquality2').text(precisionRound(request.response.feeds[0].field7,1) + 'µg/m³');
     }
   </script>
 
@@ -51,7 +52,8 @@
         <h1 id="temperature">Temp (F)</h1>
         <h2 id="humidity">Humidity (%)</h2>
         <h3 id="pressure">Pressure</h3>
-        <h3 id="airquality">PM2.5</h3>
+        <h3 id="airquality1">PM2.5</h3>
+        <h3 id="airquality2">PM10</h3>
         <a href="javascript:window.location.reload(true);"><button style="margin-top: 20px;" id="reload">reload</button></a>
       </div>
     </div>
