@@ -38,7 +38,7 @@
         $('#temperature').text(precisionRound(request.response.feeds[0].field2,1) +'° F');
         $('#humidity').text(precisionRound(request.response.feeds[0].field4,1) + '%');
         $('#pressure').text(precisionRound(request.response.feeds[0].field3,2) + 'hPa');
-        $('#airquality').text(precisionRound(request.response.feeds[0].field8,1) + 'ug/m^3');
+        $('#airquality').text(precisionRound(request.response.feeds[0].field8,1) + 'µg/m³');
     }
   </script>
 
