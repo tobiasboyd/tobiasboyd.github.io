@@ -28,7 +28,7 @@
     var factor = Math.pow(10, precision);
     return Math.round(number * factor) / factor;
     }
-    var requestURL = '//api.thingspeak.com/channels/331124/feeds.json?api_key=CCSB1H8NW7XAKW20&results=1';
+    var requestURL = '//api.thingspeak.com/channels/331124/feeds/last.json?api_key=CCSB1H8NW7XAKW20&results=1';
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.responseType = 'json';
