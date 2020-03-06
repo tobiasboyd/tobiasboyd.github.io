@@ -36,11 +36,11 @@
     request.send();
     request.onload = function() {
         var bme280 = request.response;
-        $('#temperature').text(precisionRound(request.response.feeds[0].field2,1) +'° F');
-        $('#humidity').text(precisionRound(request.response.feeds[0].field4,1) + '%');
-        $('#pressure').text(precisionRound(request.response.feeds[0].field3,2) + 'hPa');
-        $('#airquality1').text(precisionRound(request.response.feeds[0].field8,1) + 'µg/m³');
-        $('#airquality2').text(precisionRound(request.response.feeds[0].field7,1) + 'µg/m³');
+        $('#temperature').text(precisionRound(request.response.field2,1) +'° F');
+        $('#humidity').text(precisionRound(request.response.field4,1) + '%');
+        $('#pressure').text(precisionRound(request.response.field3,2) + 'hPa');
+        $('#airquality1').text(precisionRound(request.response.field8,1) + 'µg/m³');
+        $('#airquality2').text(precisionRound(request.response.field7,1) + 'µg/m³');
     }
   </script>
 
